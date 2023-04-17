@@ -30,3 +30,5 @@
 
 [解决Xcode中source control navigator出现多个项目](https://github.com/darkjoin/Learning/blob/master/sources/%E8%A7%A3%E5%86%B3Xcode%E4%B8%ADsource%20control%20navigator%E5%87%BA%E7%8E%B0%E5%A4%9A%E4%B8%AA%E9%A1%B9%E7%9B%AE.md)
 
+[iOS虚拟定位检测](https://github.com/darkjoin/Learning/blob/master/sources/iOS%E8%99%9A%E6%8B%9F%E5%AE%9A%E4%BD%8D%E6%A3%80%E6%B5%8B.md)
+
