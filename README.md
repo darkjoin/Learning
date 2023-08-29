@@ -32,3 +32,4 @@
 
 [iOS虚拟定位检测](https://github.com/darkjoin/Learning/blob/master/sources/iOS%E8%99%9A%E6%8B%9F%E5%AE%9A%E4%BD%8D%E6%A3%80%E6%B5%8B.md)
 
+[iOS项目嵌入Flutter](https://github.com/darkjoin/Learning/blob/master/sources/iOS%E9%A1%B9%E7%9B%AE%E5%B5%8C%E5%85%A5Flutter.md)

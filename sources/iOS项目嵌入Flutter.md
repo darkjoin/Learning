@@ -24,7 +24,7 @@ Your module code is in my_flutter/lib/main.dart.
 完成之后会在项目目录下看到`my_flutter`文件夹。
 
 创建的Flutter module目录结构如下，编写的Dart代码是放在 `lib/` 目录下：
-![](README images/IntegrateFlutterIntoiOSAppImages/myFlutterModuleDirectory.png)
+![](Images/IntegrateFlutterIntoiOSAppImages/myFlutterModuleDirectory.png)
 
 ## 2 在iOS项目中集成Flutter module
 
@@ -114,11 +114,11 @@ Frameworks written to
 ```
 完成之后会在项目目录下生成`Flutter`文件夹，在该`Flutter/`目录下可以看到生成的不同模式下的Framewroks：
 
-![](README images/IntegrateFlutterIntoiOSAppImages/flutterFrameworkDirectory.png)
+![](Images/IntegrateFlutterIntoiOSAppImages/flutterFrameworkDirectory.png)
 
 将生成的Framework集成到项目中。
 在项目Target的`Build Phases > Link Binary With Libraries`部分添加刚才生成的Framework：
-![](README images/IntegrateFlutterIntoiOSAppImages/frameworkLinkBinaryWithLibraries.png)
+![](Images/IntegrateFlutterIntoiOSAppImages/frameworkLinkBinaryWithLibraries.png)
 
 上面添加Debug模式或者Release模式下的Framework都可以，根据自己的需要来添加就好。
 
@@ -135,7 +135,7 @@ Frameworks written to
 $(PROJECT_DIR)/Flutter/$CONFIGURATION
 ```
 
-![](README images/IntegrateFlutterIntoiOSAppImages/frameworkSearchPath.png)
+![](Images/IntegrateFlutterIntoiOSAppImages/frameworkSearchPath.png)
 
 > 注意：官方文档上这里的环境变量用的是`$(CONFIGURATION)`，不过这种写法在Xcode14.2有问题，需要改为`$CONFIGURATION`，如果你也遇到这个问题，可自行搜索环境变量的配置。
 >
@@ -147,11 +147,11 @@ $(PROJECT_DIR)/Flutter/$CONFIGURATION
 
 链接Framewrok之后，就可以在Target的`General > Frameworks, Libraries, and Embedded Content`部分，看到刚才嵌入的frameworks，然后手动将Embed改为`Embed & Sign`：
 
-![](README images/IntegrateFlutterIntoiOSAppImages/frameworkEmbed&Sign.png)
+![](Images/IntegrateFlutterIntoiOSAppImages/frameworkEmbed&Sign.png)
 
 完成后会在`Build Phases > Embed Frameworks`部分看到刚才嵌入的frameworks：
 
-![](README images/IntegrateFlutterIntoiOSAppImages/embedFrameworkInBuildPhases.png)
+![](Images/IntegrateFlutterIntoiOSAppImages/embedFrameworkInBuildPhases.png)
 
 接下来就可以正常导入Flutter模块进行编译了。
 
@@ -184,7 +184,7 @@ Frameworks written to
 ```
 完成之后会在当前项目目录下看到`Flutter`文件夹，里面有生成的`Flutter.podspec`文件和`App.xcframework`：
 
-![](README images/IntegrateFlutterIntoiOSAppImages/flutterPodspecDirectory.png)
+![](Images/IntegrateFlutterIntoiOSAppImages/flutterPodspecDirectory.png)
 
 将Flutter添加到Podfile文件中：
 
@@ -205,11 +205,11 @@ end
 > 注意，这里podspec的路径需要硬编码，如果是在Release模式下，需要改为'Flutter/Release/Flutter.podspec'，如果是在Debug模式下，需要改为'Flutter/Debug/Flutter.podspec'
 执行`pod install`，会在项目中看到导入的`Flutter.xcframework`：
 
-![](README images/IntegrateFlutterIntoiOSAppImages/flutterFrameworkPods.png)
+![](Images/IntegrateFlutterIntoiOSAppImages/flutterFrameworkPods.png)
 
 然后还需要将生成的`App.xcframework`按照2.2的方法链接和嵌入到当前项目中：
 
-![](README images/IntegrateFlutterIntoiOSAppImages/embedAppxcFramework.png)
+![](Images/IntegrateFlutterIntoiOSAppImages/embedAppxcFramework.png)
 
 > 如果只有`Flutter.xcframework`，会在运行时报错`Failed to find assets path for "Frameworks/App.framework/flutter_assets"`。
 
@@ -260,7 +260,7 @@ class ViewController: UIViewController {
 ```
 效果如下：
 
-<img src="README images/IntegrateFlutterIntoiOSAppImages/flutterPresentDelay.gif" style="zoom:67%;" />
+<img src="Images/IntegrateFlutterIntoiOSAppImages/flutterPresentDelay.gif" style="zoom:67%;" />
 
 #### 3.2 预热FlutterEngine
 
@@ -298,7 +298,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 效果如下：
 
-<img src="README images/IntegrateFlutterIntoiOSAppImages/flutterPresentWithoutDelay.gif" style="zoom:67%;" />
+<img src="Images/IntegrateFlutterIntoiOSAppImages/flutterPresentWithoutDelay.gif" style="zoom:67%;" />
 
 ## 参考资料
 https://docs.flutter.dev/development/add-to-app/ios/project-setup
